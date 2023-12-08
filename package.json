@@ -1,0 +1,26 @@
+{
+  "name": "book-app-vanilla",
+  "version": "1.0.0",
+  "description": "CRUD app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "module",
+    "url": "book-app-vanilla.git"
+  },
+  "keywords": [
+    "js",
+    "get",
+    "put",
+    "post",
+    "delete",
+    "update"
+  ],
+  "author": "Celia Millán",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
