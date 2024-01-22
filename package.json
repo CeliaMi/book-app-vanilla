@@ -4,7 +4,8 @@
   "description": "CRUD app",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "api": "json-server --watch server/db.json"
   },
   "repository": {
     "type": "module",
