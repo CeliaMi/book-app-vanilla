@@ -1,7 +1,12 @@
 //CREATE
 
-async function createBooks(newBook){
-
+async function createBooks(){
+    const book = {
+            "title": "secreto de la naturaleza",
+            "writer": "Oscar S. Aranda",
+            "book_description": "Este libro es un viaje que nos llevará por maravillosos."
+    }
+    await fetch(`http://localhost:3000/books`, { method: 'POST' , headers:{ 'Content-Type': 'application/json'}, body: JSON.stringify(book) })
 }
 //READ
 async function getBooks(){
