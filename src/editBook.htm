@@ -6,13 +6,11 @@
     <title >Document</title>
 </head>
 <body>
-    <button onclick="printBooks()">cargar info</button>
-    <button onclick="createBooks()">post</button>
-    <form onsubmit="sendData(event)">
+    <form onSubmit="sendData(event)">
         <lavel>Título</lavel>
-        <input type="text" name= title onChange="getTitle(event)">
+        <input type="text" name=title id="title" onChange="getTitle(event)">
         <lavel>Autor</lavel>
-        <input type="text" name= writer onChange="getWriter(event)">
+        <input type="text" name= writer id="writer" onChange="getWriter(event)">
         <lavel>Descripción</lavel>
         <input type="text" name="description" onChange="getDescription(event)">
         <button type="submit">Enviar</button>

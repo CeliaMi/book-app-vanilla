@@ -8,6 +8,35 @@ async function createBooks(){
     }
     await fetch(`http://localhost:3000/books`, { method: 'POST' , headers:{ 'Content-Type': 'application/json'}, body: JSON.stringify(book) })
 }
+
+//post with form
+let title = ""
+let writer = ""
+let description = ""
+
+function getTitle(event){
+    title = event.target.value
+}
+function getWriter(event){
+    writer = event.target.value
+}
+function getDescription(event){
+    description =  event.target.value
+}
+
+ function sendData(event){
+    event.preventDefault()
+    const newBook = {
+        "title":title,
+        "writer": writer, 
+        "book_description": description }
+     postBooks(newBook)
+}
+
+async function postBooks(Book){
+    await fetch(`http://localhost:3000/books`, { method: 'POST' , headers:{ 'Content-Type': 'application/json'}, body: JSON.stringify(Book) })
+}
+
 //READ
 async function getBooks(){
     const result = await fetch('http://localhost:3000/books')
@@ -17,6 +46,7 @@ async function getBooks(){
 //UPDATE
 
 async function updateBooks(id, editedBook){
+    await fetch(`http://localhost:3000/books/${id}`, { method: 'POST' , headers:{ 'Content-Type': 'application/json'}, body: JSON.stringify(editedBook) })
 
 }
 //DELETE
